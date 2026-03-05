@@ -39,23 +39,39 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelNit = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonVehiculos = new System.Windows.Forms.Button();
+            this.dataGridViewVehiculos = new System.Windows.Forms.DataGridView();
+            this.numericSueldoXkm = new System.Windows.Forms.NumericUpDown();
+            this.textBoxColor = new System.Windows.Forms.TextBox();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.labelPrecioKM = new System.Windows.Forms.Label();
+            this.labelColor = new System.Windows.Forms.Label();
+            this.labelModelo = new System.Windows.Forms.Label();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.labelModelo = new System.Windows.Forms.Label();
-            this.labelColor = new System.Windows.Forms.Label();
-            this.labelPrecioKM = new System.Windows.Forms.Label();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.textBoxColor = new System.Windows.Forms.TextBox();
-            this.numericSueldoXkm = new System.Windows.Forms.NumericUpDown();
-            this.dataGridViewVehiculos = new System.Windows.Forms.DataGridView();
-            this.buttonVehiculos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxNitAlquiler = new System.Windows.Forms.TextBox();
+            this.textBoxPlacaAlquiler = new System.Windows.Forms.TextBox();
+            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewAlquiler = new System.Windows.Forms.DataGridView();
+            this.buttonIngresoAlquileres = new System.Windows.Forms.Button();
+            this.numericUpDownkmRecorridosAlquiler = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericSueldoXkm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehiculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSueldoXkm)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlquiler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownkmRecorridosAlquiler)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -104,7 +120,7 @@
             this.dataGridViewClientes.Name = "dataGridViewClientes";
             this.dataGridViewClientes.RowHeadersWidth = 51;
             this.dataGridViewClientes.RowTemplate.Height = 24;
-            this.dataGridViewClientes.Size = new System.Drawing.Size(557, 240);
+            this.dataGridViewClientes.Size = new System.Drawing.Size(557, 311);
             this.dataGridViewClientes.TabIndex = 6;
             this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellContentClick);
             // 
@@ -177,6 +193,75 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // buttonVehiculos
+            // 
+            this.buttonVehiculos.Location = new System.Drawing.Point(396, 313);
+            this.buttonVehiculos.Name = "buttonVehiculos";
+            this.buttonVehiculos.Size = new System.Drawing.Size(184, 47);
+            this.buttonVehiculos.TabIndex = 9;
+            this.buttonVehiculos.Text = "Ingresar vehiculos";
+            this.buttonVehiculos.UseVisualStyleBackColor = true;
+            this.buttonVehiculos.Click += new System.EventHandler(this.buttonVehiculos_Click);
+            // 
+            // dataGridViewVehiculos
+            // 
+            this.dataGridViewVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVehiculos.Location = new System.Drawing.Point(460, 38);
+            this.dataGridViewVehiculos.Name = "dataGridViewVehiculos";
+            this.dataGridViewVehiculos.RowHeadersWidth = 51;
+            this.dataGridViewVehiculos.RowTemplate.Height = 24;
+            this.dataGridViewVehiculos.Size = new System.Drawing.Size(500, 233);
+            this.dataGridViewVehiculos.TabIndex = 8;
+            // 
+            // numericSueldoXkm
+            // 
+            this.numericSueldoXkm.DecimalPlaces = 2;
+            this.numericSueldoXkm.Location = new System.Drawing.Point(258, 222);
+            this.numericSueldoXkm.Name = "numericSueldoXkm";
+            this.numericSueldoXkm.Size = new System.Drawing.Size(161, 22);
+            this.numericSueldoXkm.TabIndex = 7;
+            // 
+            // textBoxColor
+            // 
+            this.textBoxColor.Location = new System.Drawing.Point(258, 159);
+            this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.Size = new System.Drawing.Size(161, 22);
+            this.textBoxColor.TabIndex = 6;
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.Location = new System.Drawing.Point(258, 105);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(161, 22);
+            this.textBoxModelo.TabIndex = 5;
+            // 
+            // labelPrecioKM
+            // 
+            this.labelPrecioKM.AutoSize = true;
+            this.labelPrecioKM.Location = new System.Drawing.Point(80, 222);
+            this.labelPrecioKM.Name = "labelPrecioKM";
+            this.labelPrecioKM.Size = new System.Drawing.Size(75, 16);
+            this.labelPrecioKM.TabIndex = 4;
+            this.labelPrecioKM.Text = "PrecioX km";
+            // 
+            // labelColor
+            // 
+            this.labelColor.AutoSize = true;
+            this.labelColor.Location = new System.Drawing.Point(80, 159);
+            this.labelColor.Name = "labelColor";
+            this.labelColor.Size = new System.Drawing.Size(39, 16);
+            this.labelColor.TabIndex = 3;
+            this.labelColor.Text = "Color";
+            // 
+            // labelModelo
+            // 
+            this.labelModelo.AutoSize = true;
+            this.labelModelo.Location = new System.Drawing.Point(80, 111);
+            this.labelModelo.Name = "labelModelo";
+            this.labelModelo.Size = new System.Drawing.Size(53, 16);
+            this.labelModelo.TabIndex = 2;
+            this.labelModelo.Text = "Modelo";
+            // 
             // textBoxPlaca
             // 
             this.textBoxPlaca.Location = new System.Drawing.Point(258, 48);
@@ -195,87 +280,139 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.numericUpDownkmRecorridosAlquiler);
+            this.tabPage3.Controls.Add(this.buttonIngresoAlquileres);
+            this.tabPage3.Controls.Add(this.dataGridViewAlquiler);
+            this.tabPage3.Controls.Add(this.dateTimePickerFechaFin);
+            this.tabPage3.Controls.Add(this.dateTimePickerFechaInicio);
+            this.tabPage3.Controls.Add(this.textBoxPlacaAlquiler);
+            this.tabPage3.Controls.Add(this.textBoxNitAlquiler);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(951, 420);
+            this.tabPage3.Size = new System.Drawing.Size(988, 420);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Alquileres";
+            this.tabPage3.Text = "Alquiler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // labelModelo
+            // label1
             // 
-            this.labelModelo.AutoSize = true;
-            this.labelModelo.Location = new System.Drawing.Point(80, 111);
-            this.labelModelo.Name = "labelModelo";
-            this.labelModelo.Size = new System.Drawing.Size(53, 16);
-            this.labelModelo.TabIndex = 2;
-            this.labelModelo.Text = "Modelo";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NIT";
             // 
-            // labelColor
+            // label2
             // 
-            this.labelColor.AutoSize = true;
-            this.labelColor.Location = new System.Drawing.Point(80, 159);
-            this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(39, 16);
-            this.labelColor.TabIndex = 3;
-            this.labelColor.Text = "Color";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(50, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Placa";
             // 
-            // labelPrecioKM
+            // label3
             // 
-            this.labelPrecioKM.AutoSize = true;
-            this.labelPrecioKM.Location = new System.Drawing.Point(80, 222);
-            this.labelPrecioKM.Name = "labelPrecioKM";
-            this.labelPrecioKM.Size = new System.Drawing.Size(75, 16);
-            this.labelPrecioKM.TabIndex = 4;
-            this.labelPrecioKM.Text = "PrecioX km";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 2;
             // 
-            // textBoxModelo
+            // label4
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(258, 105);
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(161, 22);
-            this.textBoxModelo.TabIndex = 5;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha alquiler";
             // 
-            // textBoxColor
+            // label5
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(258, 159);
-            this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(161, 22);
-            this.textBoxColor.TabIndex = 6;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(50, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Fecha devolucion";
             // 
-            // numericSueldoXkm
+            // label6
             // 
-            this.numericSueldoXkm.DecimalPlaces = 2;
-            this.numericSueldoXkm.Location = new System.Drawing.Point(258, 222);
-            this.numericSueldoXkm.Name = "numericSueldoXkm";
-            this.numericSueldoXkm.Size = new System.Drawing.Size(161, 22);
-            this.numericSueldoXkm.TabIndex = 7;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(50, 298);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "km recorridos";
             // 
-            // dataGridViewVehiculos
+            // textBoxNitAlquiler
             // 
-            this.dataGridViewVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVehiculos.Location = new System.Drawing.Point(460, 38);
-            this.dataGridViewVehiculos.Name = "dataGridViewVehiculos";
-            this.dataGridViewVehiculos.RowHeadersWidth = 51;
-            this.dataGridViewVehiculos.RowTemplate.Height = 24;
-            this.dataGridViewVehiculos.Size = new System.Drawing.Size(500, 233);
-            this.dataGridViewVehiculos.TabIndex = 8;
+            this.textBoxNitAlquiler.Location = new System.Drawing.Point(188, 41);
+            this.textBoxNitAlquiler.Name = "textBoxNitAlquiler";
+            this.textBoxNitAlquiler.Size = new System.Drawing.Size(144, 22);
+            this.textBoxNitAlquiler.TabIndex = 6;
             // 
-            // buttonVehiculos
+            // textBoxPlacaAlquiler
             // 
-            this.buttonVehiculos.Location = new System.Drawing.Point(396, 313);
-            this.buttonVehiculos.Name = "buttonVehiculos";
-            this.buttonVehiculos.Size = new System.Drawing.Size(184, 47);
-            this.buttonVehiculos.TabIndex = 9;
-            this.buttonVehiculos.Text = "Ingresar vehiculos";
-            this.buttonVehiculos.UseVisualStyleBackColor = true;
-            this.buttonVehiculos.Click += new System.EventHandler(this.buttonVehiculos_Click);
+            this.textBoxPlacaAlquiler.Location = new System.Drawing.Point(188, 101);
+            this.textBoxPlacaAlquiler.Name = "textBoxPlacaAlquiler";
+            this.textBoxPlacaAlquiler.Size = new System.Drawing.Size(144, 22);
+            this.textBoxPlacaAlquiler.TabIndex = 7;
+            // 
+            // dateTimePickerFechaInicio
+            // 
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(197, 168);
+            this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(269, 22);
+            this.dateTimePickerFechaInicio.TabIndex = 8;
+            // 
+            // dateTimePickerFechaFin
+            // 
+            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(188, 217);
+            this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
+            this.dateTimePickerFechaFin.Size = new System.Drawing.Size(269, 22);
+            this.dateTimePickerFechaFin.TabIndex = 9;
+            // 
+            // dataGridViewAlquiler
+            // 
+            this.dataGridViewAlquiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAlquiler.Location = new System.Drawing.Point(551, 41);
+            this.dataGridViewAlquiler.Name = "dataGridViewAlquiler";
+            this.dataGridViewAlquiler.RowHeadersWidth = 51;
+            this.dataGridViewAlquiler.RowTemplate.Height = 24;
+            this.dataGridViewAlquiler.Size = new System.Drawing.Size(406, 249);
+            this.dataGridViewAlquiler.TabIndex = 11;
+            // 
+            // buttonIngresoAlquileres
+            // 
+            this.buttonIngresoAlquileres.Location = new System.Drawing.Point(358, 342);
+            this.buttonIngresoAlquileres.Name = "buttonIngresoAlquileres";
+            this.buttonIngresoAlquileres.Size = new System.Drawing.Size(255, 59);
+            this.buttonIngresoAlquileres.TabIndex = 12;
+            this.buttonIngresoAlquileres.Text = "Ingresar Alquiler";
+            this.buttonIngresoAlquileres.UseVisualStyleBackColor = true;
+            this.buttonIngresoAlquileres.Click += new System.EventHandler(this.buttonIngresoAlquileres_Click);
+            // 
+            // numericUpDownkmRecorridosAlquiler
+            // 
+            this.numericUpDownkmRecorridosAlquiler.Location = new System.Drawing.Point(197, 296);
+            this.numericUpDownkmRecorridosAlquiler.Name = "numericUpDownkmRecorridosAlquiler";
+            this.numericUpDownkmRecorridosAlquiler.Size = new System.Drawing.Size(195, 22);
+            this.numericUpDownkmRecorridosAlquiler.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 507);
+            this.ClientSize = new System.Drawing.Size(1054, 507);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -286,8 +423,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericSueldoXkm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSueldoXkm)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlquiler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownkmRecorridosAlquiler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +457,19 @@
         private System.Windows.Forms.TextBox textBoxColor;
         private System.Windows.Forms.TextBox textBoxModelo;
         private System.Windows.Forms.Label labelPrecioKM;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
+        private System.Windows.Forms.TextBox textBoxPlacaAlquiler;
+        private System.Windows.Forms.TextBox textBoxNitAlquiler;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonIngresoAlquileres;
+        private System.Windows.Forms.DataGridView dataGridViewAlquiler;
+        private System.Windows.Forms.NumericUpDown numericUpDownkmRecorridosAlquiler;
     }
 }
 

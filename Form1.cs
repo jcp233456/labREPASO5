@@ -13,15 +13,16 @@ namespace labREPASO5
 {
     public partial class Form1 : Form
     {
-        List<Cliente>clientes= new List<Cliente>();
-        List<Vehiculo>vehiculos=new List<Vehiculo>();
+        List<Cliente> clientes = new List<Cliente>();
+        List<Vehiculo> vehiculos = new List<Vehiculo>();
+        List<Alquiler> alquileres = new List<Alquiler>();
         public Form1()
         {
             InitializeComponent();
             LeerClientes();
         }
 
-        private void GuardarCliente() { 
+        private void GuardarCliente() {
             FileStream stream = new FileStream("Clientes.txt", FileMode.Create, FileAccess.Write);
 
             StreamWriter writer = new StreamWriter(stream);
@@ -31,7 +32,7 @@ namespace labREPASO5
                 writer.WriteLine(item.Nit);
                 writer.WriteLine(item.Nombre);
                 writer.WriteLine(item.Direccion);
-                
+
 
             }
             writer.Close();
@@ -56,7 +57,7 @@ namespace labREPASO5
                 leercliente.Nit = reader.ReadLine();
                 leercliente.Nombre = reader.ReadLine();
                 leercliente.Direccion = reader.ReadLine();
-                
+
 
                 clientes.Add(leercliente);
             }
@@ -76,8 +77,8 @@ namespace labREPASO5
             Cliente newcliente = new Cliente();
             newcliente.Nit = textBoxNit.Text;
             newcliente.Nombre = textBoxNombre.Text;
-            newcliente.Direccion= textBoxDireccion.Text;
-            
+            newcliente.Direccion = textBoxDireccion.Text;
+
             clientes.Add(newcliente);
             GuardarCliente();
             mostrarCliente();
@@ -96,10 +97,10 @@ namespace labREPASO5
 
         private void buttonVehiculos_Click(object sender, EventArgs e)
         {
-            Vehiculo vehiculo= new Vehiculo();
-            vehiculo.Placa=textBoxPlaca.Text;
-            vehiculo.Modelo=textBoxModelo.Text;
-            vehiculo.Color=textBoxColor.Text;
+            Vehiculo vehiculo = new Vehiculo();
+            vehiculo.Placa = textBoxPlaca.Text;
+            vehiculo.Modelo = textBoxModelo.Text;
+            vehiculo.Color = textBoxColor.Text;
             vehiculo.PrecioXkm = numericSueldoXkm.Value;
 
             vehiculos.Add(vehiculo);
@@ -151,7 +152,7 @@ namespace labREPASO5
                 leervehiculos.Placa = reader.ReadLine();
                 leervehiculos.Modelo = reader.ReadLine();
                 leervehiculos.Color = reader.ReadLine();
-                leervehiculos.PrecioXkm =Convert.ToInt16(reader.ReadLine());
+                leervehiculos.PrecioXkm = Convert.ToInt16(reader.ReadLine());
 
 
                 vehiculos.Add(leervehiculos);
@@ -166,6 +167,80 @@ namespace labREPASO5
         {
             LeerClientes();
             LeerVehiculo();
+            LeerAlquiler();
+        }
+
+        private void buttonIngresoAlquileres_Click(object sender, EventArgs e)
+        {
+
+            Alquiler alquiler = new Alquiler();
+            alquiler.Nit = textBoxNitAlquiler.Text;
+            alquiler.Placa = textBoxPlacaAlquiler.Text;
+            alquiler.Fechainicio = dateTimePickerFechaInicio.Value;
+            alquiler.Fechafin = dateTimePickerFechaFin.Value;
+            alquiler.Kmrecorridos = numericUpDownkmRecorridosAlquiler.Value;
+
+            alquileres.Add(alquiler);
+            GuardarAlquiler();
+            mostrarAlquiler();
+
+        }
+
+        private void GuardarAlquiler()
+        {
+            FileStream stream = new FileStream("Alquileres.txt", FileMode.Create, FileAccess.Write);
+
+            StreamWriter writer = new StreamWriter(stream);
+
+            foreach (var item in alquileres)
+            {
+                writer.WriteLine(item.Nit);
+                writer.WriteLine(item.Placa);
+                writer.WriteLine(item.Fechainicio);
+                writer.WriteLine(item.Fechafin);
+                writer.WriteLine(item.Kmrecorridos);
+
+
+
+            }
+            writer.Close();
+            mostrarAlquiler();
+
+        }
+
+        private void mostrarAlquiler()
+        {
+            dataGridViewAlquiler.DataSource = null;
+            dataGridViewAlquiler.DataSource = alquileres;
+        }
+
+        private void LeerAlquiler()
+        {
+
+            string fileName = "Alquileres.txt";
+
+
+            FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(stream);
+
+
+            while (reader.Peek() > -1)
+
+            {
+                Alquiler leeralquiler = new Alquiler();
+                leeralquiler.Nit = reader.ReadLine();
+                leeralquiler.Placa = reader.ReadLine();
+                leeralquiler.Fechainicio = Convert.ToDateTime(reader.ReadLine());
+                leeralquiler.Fechafin = Convert.ToDateTime(reader.ReadLine());
+                leeralquiler.Kmrecorridos = Convert.ToInt16(reader.ReadLine());
+
+
+                alquileres.Add(leeralquiler);
+            }
+
+            reader.Close();
+            mostrarAlquiler();
+
         }
     }
 }
