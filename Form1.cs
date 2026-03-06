@@ -16,6 +16,7 @@ namespace labREPASO5
         List<Cliente> clientes = new List<Cliente>();
         List<Vehiculo> vehiculos = new List<Vehiculo>();
         List<Alquiler> alquileres = new List<Alquiler>();
+        List<Reporte> reportes = new List<Reporte>();
         public Form1()
         {
             InitializeComponent();
@@ -168,6 +169,10 @@ namespace labREPASO5
             LeerClientes();
             LeerVehiculo();
             LeerAlquiler();
+
+            mostrarCliente();
+            mostrarVehiculo();
+            mostrarAlquiler();
         }
 
         private void buttonIngresoAlquileres_Click(object sender, EventArgs e)
@@ -240,6 +245,56 @@ namespace labREPASO5
 
             reader.Close();
             mostrarAlquiler();
+
+        }
+
+        private void MostrarReporte()
+        {
+            dataGridViewReporte.DataSource = null;
+            dataGridViewReporte.DataSource = reportes;
+        }
+
+        private void buttonReporte_Click(object sender, EventArgs e)
+        {
+            //Un cilo que recorra todos los alquileres
+            foreach (var alquiler in alquileres)
+            {
+                Reporte reporte = new Reporte();
+
+                //Por cada alquiler que se lee, hay que buscar entre los clientes
+                //quien tiene el NIT que alquilo, para encontrar su Nombre
+                foreach (var cliente in clientes)
+                {
+                    if (alquiler.Nit == cliente.Nit)
+                    {
+                        reporte.Nombre = cliente.Nombre;
+                    }
+                }
+                //Por cada alquiler que se lee, hay que buscar entre los vehículos
+                //quien tiene la Placa del vehículo que se alquilo, para encontra
+                //los datos de ese vehículo
+                foreach (var vehiculo in vehiculos)
+                {
+                    if (alquiler.Placa == vehiculo.Placa)
+                    {
+                        reporte.Placa = vehiculo.Placa;
+                        reporte.Color = vehiculo.Color;
+
+                        reporte.Fechafin = alquiler.Fechafin;
+
+                        //Aquí se calcula el Total a pagar
+                        //El precio por vehículo esta en el Vehículo
+                        //y los kilometros recorridos estan en el Alquiler
+                        decimal Total = vehiculo.PrecioXkm * alquiler.Kmrecorridos;
+
+                        reporte.Totalpagar = Total;
+                    }
+                }
+                //Cada dato que se encontró se guardo en reporte
+                //Entonces guardamos ese reporte en la lista de reportes
+                reportes.Add(reporte);
+            }
+            MostrarReporte();
 
         }
     }
