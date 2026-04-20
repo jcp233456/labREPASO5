@@ -297,5 +297,10 @@ namespace labREPASO5
             MostrarReporte();
 
         }
+
+        private void dataGridViewReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

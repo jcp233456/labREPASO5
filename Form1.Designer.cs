@@ -64,8 +64,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridViewReporte = new System.Windows.Forms.DataGridView();
             this.buttonReporte = new System.Windows.Forms.Button();
+            this.dataGridViewReporte = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
@@ -425,16 +425,6 @@
             this.tabPage4.Text = "Reportes";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewReporte
-            // 
-            this.dataGridViewReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReporte.Location = new System.Drawing.Point(27, 26);
-            this.dataGridViewReporte.Name = "dataGridViewReporte";
-            this.dataGridViewReporte.RowHeadersWidth = 51;
-            this.dataGridViewReporte.RowTemplate.Height = 24;
-            this.dataGridViewReporte.Size = new System.Drawing.Size(917, 315);
-            this.dataGridViewReporte.TabIndex = 0;
-            // 
             // buttonReporte
             // 
             this.buttonReporte.Location = new System.Drawing.Point(342, 356);
@@ -444,6 +434,17 @@
             this.buttonReporte.Text = "Ver reporte";
             this.buttonReporte.UseVisualStyleBackColor = true;
             this.buttonReporte.Click += new System.EventHandler(this.buttonReporte_Click);
+            // 
+            // dataGridViewReporte
+            // 
+            this.dataGridViewReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewReporte.Location = new System.Drawing.Point(20, 25);
+            this.dataGridViewReporte.Name = "dataGridViewReporte";
+            this.dataGridViewReporte.RowHeadersWidth = 51;
+            this.dataGridViewReporte.RowTemplate.Height = 24;
+            this.dataGridViewReporte.Size = new System.Drawing.Size(917, 315);
+            this.dataGridViewReporte.TabIndex = 0;
+            this.dataGridViewReporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReporte_CellContentClick);
             // 
             // Form1
             // 
